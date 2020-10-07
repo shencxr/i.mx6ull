@@ -1,1 +1,1 @@
-# i.mx6ull
+i am scxr

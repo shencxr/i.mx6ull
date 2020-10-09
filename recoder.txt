@@ -1,0 +1,7 @@
+1：使用uboot进行裸机实验，启动uboot之后，使用tftp与主机通信，下载裸机程序到指定内存地址，然后go
+（避免裸机程序繁琐的烧写步骤，SD卡等等）
+2：linux使用nfs挂载远程文件系统,步骤包括：
+	（1）：配置主机nfs服务器
+	（2）：确定linux内核支持nfs文件系统（make menuconfig）以及bootargs的传递方式（同样在menuconfig中设置）
+	（3）：如果设置了内核可以从uboot获取bootargs，则修改uboot中的环境变量bootargs，参数设置为挂载nfs相关的配置即可
+
